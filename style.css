@@ -1,0 +1,1183 @@
+:root {
+    --pink: #f3a8c4;
+    --pink-dark: #d76f99;
+    --pink-light: #fff0f5;
+
+    --cream: #fffaf6;
+    --paper: #fffdfb;
+
+    --text: #35282e;
+    --muted: #8c747d;
+
+    --line: #ead8df;
+
+    --yellow: #fff0a8;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f7dbe5;
+    color: var(--text);
+
+    font-family: "DM Sans", sans-serif;
+
+    overflow-x: hidden;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 100dvh;
+
+    padding:
+        calc(60px + env(safe-area-inset-top))
+        25px
+        calc(45px + env(safe-area-inset-bottom));
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(243, 168, 196, 0.4),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(243, 168, 196, 0.35),
+            transparent 30%
+        ),
+        var(--pink-light);
+}
+
+.hero-tape {
+    position: absolute;
+
+    top: 45px;
+    right: -30px;
+
+    width: 130px;
+    height: 28px;
+
+    background: rgba(255, 222, 231, 0.75);
+
+    transform: rotate(35deg);
+}
+
+.hero-sticker {
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+
+    border-radius: 50%;
+
+    font-size: 27px;
+
+    box-shadow:
+        0 10px 25px rgba(80, 35, 50, 0.1);
+
+    transform: rotate(-8deg);
+
+    margin-bottom: 25px;
+}
+
+.eyebrow {
+    color: var(--pink-dark);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.2em;
+
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    margin: 15px 0 20px;
+
+    font-family: "Pacifico", cursive;
+
+    font-size: clamp(58px, 18vw, 82px);
+
+    font-weight: 400;
+
+    line-height: 0.95;
+}
+
+.name-label {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 9px 17px;
+
+    background: white;
+
+    border: 1px solid var(--line);
+
+    border-radius: 100px;
+
+    font-size: 12px;
+
+    transform: rotate(2deg);
+}
+
+.name-label span {
+    color: var(--muted);
+}
+
+.name-label strong {
+    color: var(--pink-dark);
+}
+
+.hero-description {
+    max-width: 290px;
+
+    margin: 27px auto;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+.start-button {
+    border: none;
+
+    padding: 14px 21px;
+
+    background: var(--text);
+
+    color: white;
+
+    border-radius: 100px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(50, 35, 40, 0.15);
+}
+
+.start-button span {
+    margin-left: 6px;
+}
+
+.hero-handwriting {
+    position: absolute;
+
+    bottom: 45px;
+    right: 25px;
+
+    font-family: "Caveat", cursive;
+
+    color: var(--pink-dark);
+
+    font-size: 17px;
+
+    transform: rotate(-7deg);
+}
+
+
+/* =========================================
+   DOODLES
+========================================= */
+
+.doodle {
+    position: fixed;
+
+    pointer-events: none;
+
+    z-index: 20;
+
+    color: var(--pink-dark);
+
+    opacity: 0.35;
+}
+
+.doodle-flower-1 {
+    top: 18%;
+    left: 8%;
+
+    font-size: 22px;
+}
+
+.doodle-flower-2 {
+    bottom: 18%;
+    right: 8%;
+
+    font-size: 19px;
+}
+
+.doodle-star-1 {
+    top: 35%;
+    right: 9%;
+
+    font-size: 18px;
+}
+
+.doodle-star-2 {
+    top: 62%;
+    left: 7%;
+
+    font-size: 15px;
+}
+
+.doodle-heart-1 {
+    top: 75%;
+    right: 10%;
+
+    font-size: 22px;
+}
+
+.doodle-heart-2 {
+    top: 48%;
+    left: 10%;
+
+    font-size: 17px;
+}
+
+
+/* =========================================
+   GENERAL
+========================================= */
+
+.section {
+    padding: 90px 23px;
+
+    position: relative;
+}
+
+.section-number {
+    margin-bottom: 17px;
+
+    color: var(--pink-dark);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.17em;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.intro {
+    background: var(--cream);
+}
+
+.intro h2,
+.stats h2,
+.message h2,
+.collage-section h2,
+.double-memory h2 {
+    margin-bottom: 25px;
+
+    font-family: "Pacifico", cursive;
+
+    font-size: 38px;
+
+    line-height: 1.2;
+
+    font-weight: 400;
+}
+
+.intro > p {
+    margin-bottom: 18px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.85;
+}
+
+.sticky-note {
+    position: relative;
+
+    display: flex;
+
+    gap: 11px;
+
+    margin-top: 35px;
+
+    padding: 22px 18px;
+
+    background: var(--yellow);
+
+    box-shadow:
+        5px 7px 0 rgba(80, 60, 30, 0.08);
+
+    transform: rotate(-1.5deg);
+}
+
+.sticky-pin {
+    position: absolute;
+
+    top: -7px;
+    left: 50%;
+
+    width: 15px;
+    height: 15px;
+
+    background: var(--pink-dark);
+
+    border-radius: 50%;
+
+    transform: translateX(-50%);
+}
+
+.sticky-note p {
+    font-family: "Caveat", cursive;
+
+    font-size: 18px;
+
+    line-height: 1.25;
+}
+
+
+/* =========================================
+   PHOTO SECTIONS
+========================================= */
+
+.photo-section {
+    position: relative;
+
+    padding: 80px 22px;
+
+    overflow: hidden;
+}
+
+.photo-pink {
+    background: var(--pink-light);
+}
+
+.photo-cream {
+    background: var(--cream);
+}
+
+
+/* =========================================
+   POLAROIDS
+========================================= */
+
+.polaroid {
+    position: relative;
+
+    width: 92%;
+
+    margin: 0 auto;
+
+    padding: 9px 9px 48px;
+
+    background: var(--paper);
+
+    box-shadow:
+        0 15px 35px rgba(75, 40, 50, 0.13);
+}
+
+.polaroid img {
+    aspect-ratio: 4 / 5;
+
+    object-fit: cover;
+}
+
+.rotate-left {
+    transform: rotate(-2.3deg);
+}
+
+.rotate-right {
+    transform: rotate(2.2deg);
+}
+
+.tape {
+    position: absolute;
+
+    top: -12px;
+    left: 50%;
+
+    width: 75px;
+    height: 25px;
+
+    background: rgba(255, 225, 233, 0.78);
+
+    transform:
+        translateX(-50%)
+        rotate(-2deg);
+
+    z-index: 2;
+}
+
+.tape-pink {
+    background: rgba(243, 168, 196, 0.65);
+}
+
+
+/* =========================================
+   SINGLE CAPTION
+========================================= */
+
+.photo-caption {
+    position: absolute;
+
+    bottom: 12px;
+
+    left: 12px;
+    right: 12px;
+
+    text-align: center;
+
+    font-family: "Caveat", cursive;
+
+    font-size: 18px;
+
+    line-height: 1.1;
+
+    color: var(--muted);
+}
+
+
+/* =========================================
+   CAMERA ROLL
+========================================= */
+
+.collage-section {
+    position: relative;
+
+    padding: 90px 22px 70px;
+
+    background: #fff8ee;
+
+    overflow: hidden;
+}
+
+.collage-intro {
+    margin-bottom: 35px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+.single-collage-photo {
+    position: relative;
+
+    width: 78%;
+
+    margin: 0 auto 65px;
+
+    padding: 8px 8px 48px;
+
+    background: white;
+
+    box-shadow:
+        0 12px 30px rgba(70, 40, 50, 0.13);
+}
+
+.single-collage-photo img {
+    width: 100%;
+
+    aspect-ratio: 4 / 5;
+
+    object-fit: cover;
+}
+
+.collage-photo-one {
+    margin-left: 2%;
+
+    transform: rotate(-3deg);
+}
+
+.collage-photo-two {
+    margin-right: 2%;
+
+    transform: rotate(3deg);
+}
+
+.collage-photo-three {
+    margin-left: 10%;
+
+    transform: rotate(-2deg);
+}
+
+.mini-tape {
+    position: absolute;
+
+    top: -11px;
+    left: 50%;
+
+    width: 68px;
+    height: 23px;
+
+    background: rgba(255, 225, 233, 0.8);
+
+    transform:
+        translateX(-50%)
+        rotate(-2deg);
+
+    z-index: 3;
+}
+
+.pink-tape {
+    background: rgba(243, 168, 196, 0.65);
+}
+
+.collage-caption {
+    position: absolute;
+
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+
+    text-align: center;
+
+    font-family: "Caveat", cursive;
+
+    font-size: 17px;
+
+    line-height: 1.1;
+
+    color: var(--muted);
+}
+
+.collage-sticker {
+    display: table;
+
+    margin: -15px 5px 0 auto;
+
+    padding: 10px 13px;
+
+    background: var(--pink);
+
+    border-radius: 100px;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    transform: rotate(4deg);
+}
+
+
+/* =========================================
+   WIDE PHOTO
+========================================= */
+
+.wide-photo {
+    position: relative;
+
+    width: 100%;
+
+    margin: 0 auto;
+
+    padding: 8px 8px 48px;
+
+    background: white;
+
+    box-shadow:
+        0 14px 30px rgba(75, 40, 50, 0.12);
+
+    transform: rotate(1deg);
+}
+
+.wide-photo img {
+    aspect-ratio: 4 / 3;
+
+    object-fit: cover;
+}
+
+
+/* =========================================
+   HAND NOTE
+========================================= */
+
+.hand-note {
+    position: absolute;
+
+    font-family: "Caveat", cursive;
+
+    font-size: 19px;
+
+    color: var(--pink-dark);
+}
+
+.note-left {
+    left: 20px;
+    bottom: 45px;
+
+    transform: rotate(-6deg);
+}
+
+
+/* =========================================
+   STATS
+========================================= */
+
+.stats {
+    background: var(--pink-light);
+}
+
+.stats-description {
+    margin-bottom: 40px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+.stat-item {
+    margin-bottom: 30px;
+}
+
+.stat-heading {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 9px;
+
+    font-size: 11px;
+}
+
+.stat-heading span {
+    color: var(--muted);
+}
+
+.stat-heading strong {
+    color: var(--pink-dark);
+
+    font-size: 9px;
+}
+
+.stat-bar {
+    height: 7px;
+
+    background: white;
+
+    border-radius: 100px;
+
+    overflow: hidden;
+}
+
+.stat-progress {
+    height: 100%;
+
+    background: var(--pink);
+
+    border-radius: inherit;
+}
+
+.progress-35 {
+    width: 35%;
+}
+
+.progress-90 {
+    width: 90%;
+}
+
+.progress-95 {
+    width: 95%;
+}
+
+.progress-100 {
+    width: 100%;
+}
+
+.stat-sticker {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 10px 12px;
+
+    background: var(--yellow);
+
+    color: #766333;
+
+    font-size: 7px;
+
+    font-weight: 700;
+
+    line-height: 1.5;
+
+    transform: rotate(-4deg);
+}
+
+
+/* =========================================
+   LAST TWO PHOTOS
+========================================= */
+
+/*
+    IMPORTANT:
+    These photos no longer overlap.
+
+    Each photo gets its own space,
+    so neither caption can be covered.
+*/
+
+.double-memory {
+    position: relative;
+
+    padding: 90px 22px 110px;
+
+    background: var(--cream);
+
+    overflow: hidden;
+}
+
+.double-memory h2 {
+    margin-bottom: 50px;
+}
+
+.last-photos {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 65px;
+}
+
+
+/* Individual photo */
+
+.double-photo {
+    position: relative;
+
+    width: 78%;
+
+    padding: 8px 8px 50px;
+
+    background: white;
+
+    box-shadow:
+        0 15px 32px rgba(75, 40, 50, 0.14);
+}
+
+
+/*
+    PHOTO 09
+*/
+
+.photo-a {
+    align-self: flex-start;
+
+    transform: rotate(-3.5deg);
+}
+
+
+/*
+    PHOTO 10
+*/
+
+.photo-b {
+    align-self: flex-end;
+
+    transform: rotate(3.5deg);
+}
+
+
+/*
+    Image itself
+*/
+
+.double-photo img {
+    display: block;
+
+    width: 100%;
+
+    aspect-ratio: 4 / 5;
+
+    object-fit: cover;
+}
+
+
+/*
+    Caption
+*/
+
+.mini-caption {
+    position: absolute;
+
+    left: 10px;
+    right: 10px;
+
+    bottom: 12px;
+
+    text-align: center;
+
+    font-family: "Caveat", cursive;
+
+    font-size: 18px;
+
+    line-height: 1.1;
+
+    color: var(--muted);
+}
+
+
+/* =========================================
+   MESSAGE
+========================================= */
+
+.message {
+    background: var(--cream);
+}
+
+.message h2 {
+    margin-bottom: 35px;
+}
+
+.letter {
+    position: relative;
+
+    padding: 32px 22px;
+
+    background: #fff7fa;
+
+    border: 1px solid var(--line);
+
+    box-shadow:
+        6px 8px 0 rgba(243, 168, 196, 0.25);
+
+    transform: rotate(-0.6deg);
+}
+
+.letter-tape {
+    position: absolute;
+
+    top: -12px;
+    left: 50%;
+
+    width: 85px;
+    height: 25px;
+
+    background: rgba(243, 168, 196, 0.55);
+
+    transform:
+        translateX(-50%)
+        rotate(-2deg);
+}
+
+.letter p {
+    margin-bottom: 19px;
+
+    color: #624e55;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+}
+
+.letter strong {
+    color: var(--text);
+}
+
+.signature {
+    margin-top: 30px;
+
+    font-family: "Pacifico", cursive;
+
+    color: var(--pink-dark) !important;
+
+    font-size: 19px !important;
+}
+
+
+/* =========================================
+   FINAL PHOTO
+========================================= */
+
+.final-photo-section {
+    padding: 45px 25px 100px;
+
+    background: var(--cream);
+
+    overflow: hidden;
+}
+
+.final-photo {
+    position: relative;
+
+    padding: 10px 10px 48px;
+
+    background: white;
+
+    box-shadow:
+        0 15px 35px rgba(75, 40, 50, 0.14);
+
+    transform: rotate(1.5deg);
+}
+
+.final-photo img {
+    aspect-ratio: 4 / 5;
+
+    object-fit: cover;
+}
+
+.final-tape {
+    position: absolute;
+
+    top: -12px;
+    left: 50%;
+
+    width: 85px;
+    height: 25px;
+
+    background: rgba(255, 222, 231, 0.8);
+
+    transform:
+        translateX(-50%)
+        rotate(3deg);
+
+    z-index: 2;
+}
+
+.final-caption {
+    position: absolute;
+
+    bottom: 12px;
+
+    left: 10px;
+    right: 10px;
+
+    text-align: center;
+
+    font-family: "Caveat", cursive;
+
+    font-size: 18px;
+
+    color: var(--pink-dark);
+}
+
+
+/* =========================================
+   ENDING
+========================================= */
+
+.ending {
+    min-height: 90dvh;
+
+    padding:
+        80px 25px
+        calc(80px + env(safe-area-inset-bottom));
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(243, 168, 196, 0.35),
+            transparent 30%
+        ),
+        var(--pink-light);
+}
+
+.ending-decoration {
+    font-size: 34px;
+
+    margin-bottom: 25px;
+
+    transform: rotate(-12deg);
+}
+
+.ending h2 {
+    margin: 15px 0 22px;
+
+    font-family: "Pacifico", cursive;
+
+    font-size: 38px;
+
+    line-height: 1.25;
+
+    font-weight: 400;
+}
+
+.ending-message {
+    max-width: 260px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+.ending-sticker {
+    margin-top: 40px;
+
+    padding: 12px 17px;
+
+    background: white;
+
+    border: 1px solid var(--line);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+
+    transform: rotate(-3deg);
+
+    box-shadow:
+        3px 5px 0 rgba(70, 40, 50, 0.06);
+}
+
+.goodbye {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+    margin-top: 40px;
+}
+
+.goodbye span {
+    color: var(--muted);
+
+    font-size: 10px;
+}
+
+.goodbye strong {
+    color: var(--pink-dark);
+
+    font-size: 16px;
+}
+
+.footer-joke {
+    margin-top: 60px;
+
+    color: #aa8995;
+
+    font-size: 9px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   SCROLL REVEAL
+========================================= */
+
+.reveal {
+    opacity: 0;
+
+    transform: translateY(25px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   DESKTOP SAFETY
+========================================= */
+
+@media (min-width: 600px) {
+
+    body {
+        max-width: 430px;
+
+        margin: 0 auto;
+
+        box-shadow:
+            0 0 50px rgba(50, 20, 30, 0.1);
+    }
+
+    .doodle {
+        display: none;
+    }
+
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        animation: none !important;
+    }
+
+}
